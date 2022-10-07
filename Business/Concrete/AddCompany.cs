@@ -43,7 +43,7 @@ namespace Business.Concrete
                 Console.WriteLine($"Company Added. {result.StatusCode}");
 
             else
-                Console.WriteLine($"The company could not be added --> Hata Kodu: {result.StatusCode}");
+                Console.WriteLine($"The company could not be added --> Error Message: {result.StatusCode}");
 
             return companyResponse.CompanyId;
         }
