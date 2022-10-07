@@ -1,0 +1,12 @@
+D:\Teknik_Mülakat\BlackKite\Entities\bin\Debug\net5.0\Entities.deps.json
+D:\Teknik_Mülakat\BlackKite\Entities\bin\Debug\net5.0\Entities.dll
+D:\Teknik_Mülakat\BlackKite\Entities\bin\Debug\net5.0\ref\Entities.dll
+D:\Teknik_Mülakat\BlackKite\Entities\bin\Debug\net5.0\Entities.pdb
+D:\Teknik_Mülakat\BlackKite\Entities\obj\Debug\net5.0\Entities.csproj.AssemblyReference.cache
+D:\Teknik_Mülakat\BlackKite\Entities\obj\Debug\net5.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Teknik_Mülakat\BlackKite\Entities\obj\Debug\net5.0\Entities.AssemblyInfoInputs.cache
+D:\Teknik_Mülakat\BlackKite\Entities\obj\Debug\net5.0\Entities.AssemblyInfo.cs
+D:\Teknik_Mülakat\BlackKite\Entities\obj\Debug\net5.0\Entities.csproj.CoreCompileInputs.cache
+D:\Teknik_Mülakat\BlackKite\Entities\obj\Debug\net5.0\Entities.dll
+D:\Teknik_Mülakat\BlackKite\Entities\obj\Debug\net5.0\ref\Entities.dll
+D:\Teknik_Mülakat\BlackKite\Entities\obj\Debug\net5.0\Entities.pdb
