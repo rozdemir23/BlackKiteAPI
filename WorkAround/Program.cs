@@ -15,21 +15,9 @@ namespace WorkAround
         {
             try
             {
+               
                 //AUTHOURİZE
-                HttpClientInitial httpClientInitial = new HttpClientInitial();
-                HttpClient client = httpClientInitial.Initial();
-                AuthenticateParameters login = new AuthenticateParameters();
-
-                var serilaze = new StringContent(JsonConvert.SerializeObject(login),
-                    Encoding.UTF8, "application/json");
-
-                HttpResponseMessage httpResponseMessage = client.PostAsync("/api/v2/oauth/token",
-                    serilaze).Result;
-
-                var token = httpResponseMessage.Content.ReadAsStringAsync().Result;
-                var t = JsonConvert.DeserializeObject<Token>(token);
-
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", t.access_token);
+                var client = Authorize(out var httpResponseMessage);
 
                 if (httpResponseMessage.IsSuccessStatusCode)
                 {
@@ -63,7 +51,25 @@ namespace WorkAround
 
             }
         }
+        private static HttpClient Authorize(out HttpResponseMessage httpResponseMessage)
+        {
+            HttpClientInitial httpClientInitial = new HttpClientInitial();
+            HttpClient client = httpClientInitial.Initial();
+            AuthenticateParameters login = new AuthenticateParameters();
 
+            var serilaze = new StringContent(JsonConvert.SerializeObject(login),
+                Encoding.UTF8, "application/json");
+
+            httpResponseMessage = client.PostAsync("/api/v2/oauth/token",
+                 serilaze).Result;
+
+            var token = httpResponseMessage.Content.ReadAsStringAsync().Result;
+            var t = JsonConvert.DeserializeObject<Token>(token);
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", t.access_token);
+            return client;
+
+        }
+            
     }
 }
 
